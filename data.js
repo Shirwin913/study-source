@@ -217,5 +217,5 @@ const raw=[
 [8, "手持式XRF-970機台基本上分為兩種測試模式：塑膠模式和金屬模式。", "O"],
 [8, "ASE材料標籤分為兩種顏色，綠色材料為白色標籤，非綠色材料為粉紅色標籤。", "O"]
 ];
-const categories=['人資與教育訓練','SPEC 與文件管理','靜電防護 ESD','品質改善','IPO 服務申請','品質管理系統','法務與保密','QC 七大手法','綠色產品與 RoHS','績效考核','物品攜出','保稅與進出區'];
-const questions=raw.map(([cat,text,answer,opts],i)=>({id:i+1,cat,text,answer,type:opts==='填空'?'fill':opts?'choice':'tf',options:opts==='填空'?[]:opts?opts.split('|').map((text,i)=>({key:'ABCDEFGH'[i],text})):[{key:'O',text:'正確'},{key:'X',text:'錯誤'}]}));
+const stage1Categories=['人資與教育訓練','SPEC 與文件管理','靜電防護 ESD','品質改善','IPO 服務申請','品質管理系統','法務與保密','QC 七大手法','綠色產品與 RoHS','績效考核','物品攜出','保稅與進出區'];
+const stage1Questions=raw.map(([cat,text,answer,opts],i)=>({id:i+1,cat,text,answer,type:opts==='填空'?'fill':opts?'choice':'tf',options:opts==='填空'?[]:opts?opts.split('|').map((text,i)=>({key:'ABCDEFGH'[i],text})):[{key:'O',text:'正確'},{key:'X',text:'錯誤'}]}));
